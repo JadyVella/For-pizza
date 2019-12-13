@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#head{
+    background-color: red;
+    opacity: 0.6;
+    color: black;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#forPizza{
+    margin-right: 87.4%;
+    margin-bottom: 20%;
+    font-family: 'Knewave', cursive;
+    font-weight: bolder;
+}
+
+#pizza{
+    color: white;
+}
+
+.container-fluid{
+    background: url();
+}
