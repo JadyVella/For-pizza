@@ -15,7 +15,6 @@
 
 #forPizza{
     margin-right: 87.4%;
-    margin-bottom: 20%;
     font-family: 'Knewave', cursive;
     font-weight: bolder;
 }
@@ -24,6 +23,13 @@
     color: white;
 }
 
-.container-fluid{
-    background: url();
+.head1{
+    padding-left: 5%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.pizzaImage{
+    margin-left: 1%;
+    padding-top: 1%;
 }
