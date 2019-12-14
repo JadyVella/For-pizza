@@ -33,3 +33,9 @@
     margin-left: 1%;
     padding-top: 1%;
 }
+
+form{
+    background-color: black;
+    color: red;
+    opacity: 0.8;
+}
