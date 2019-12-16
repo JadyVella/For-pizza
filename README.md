@@ -18,3 +18,4 @@ If you want to be a member too, you can fill out the form and automatically you 
 * HTML
 * JavaScript
 * Bootstrap
+* jQuery
