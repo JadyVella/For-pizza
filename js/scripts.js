@@ -1,70 +1,86 @@
-$(document).ready(function() {
-    $("#order").submit(function(event) {
+// $(document).ready(function() {
+//     $("#order").submit(function(event) {
 
-        var priceOfPizza = function getSize() {
-        var Size = document.getElementById("size").value;
-        return parseInt(Size);
-        };
-        alert("function is working");
+//         var priceOfPizza = function getSize() {
+//         var Size = document.getElementById("size").value;
+//         return parseInt(Size);
+//         };
+//         alert("function is working");
     
-        var pizzaCrustPrice = function getCrustType() {
-            var Crust = document.getElementById("crusts").value;
-            return parseInt(Crust);
-        };
+//         var pizzaCrustPrice = function getCrustType() {
+//             var Crust = document.getElementById("crusts").value;
+//             return parseInt(Crust);
+//         };
 
-        var pizzaToppingsPrice = function getToppings() {
-            var Toppings = document.getElementById("topings").value;
-            return parseInt(Toppings);
-        };
+//         var pizzaToppingsPrice = function getToppings() {
+//             var Toppings = document.getElementById("topings").value;
+//             return parseInt(Toppings);
+//         };
 
-        var pizzaQuantityPrice = function getQuantity() {
-            var Quantity = document.getElementById("number").value;
-            return parseInt(Quantity);
-        };
+//         var pizzaQuantityPrice = function getQuantity() {
+//             var Quantity = document.getElementById("number").value;
+//             return parseInt(Quantity);
+//         };
 
-        function UserOrder(size, crust, toppings, quantity) {
-            this.newSize = size;
-            this.newCrust = crust;
-            this.newToppings = toppings;
-            this.newQuantity = quantity;
-        };
+//         function UserOrder(size, crust, toppings, quantity) {
+//             this.newSize = size;
+//             this.newCrust = crust;
+//             this.newToppings = toppings;
+//             this.newQuantity = quantity;
+//         };
 
-        var inputForUserOrder = new UserOrder(
-            priceOfPizza(),
-            pizzaCrustPrice(),
-            pizzaToppingsPrice(),
-            pizzaQuantityPrice()
-        );
-        var totalPrice = (inputForUserOrder.newSize + inputForUserOrder.newCrust + inputForUserOrder.newToppings) * inputForUserOrder.newQuantity;
-        alert(totalPrice);
+//         var inputForUserOrder = new UserOrder(
+//             priceOfPizza(),
+//             pizzaCrustPrice(),
+//             pizzaToppingsPrice(),
+//             pizzaQuantityPrice()
+//         );
+//         var totalPrice = (inputForUserOrder.newSize + inputForUserOrder.newCrust + inputForUserOrder.newToppings) * inputForUserOrder.newQuantity;
+//         alert(totalPrice);
 
-            if (delivery === true) {
-                for (;;) {
-                    var location = prompt(
-                    "where is your location? "
-                    );
-                    if (location !== "") {
-                    alert(
-                        "Your order will be delivered at " +
-                        location +
-                        ". Thank you for your trust"
-                    );
+//             if (delivery === true) {
+//                 for (;;) {
+//                     var location = prompt(
+//                     "where is your location? "
+//                     );
+//                     if (location !== "") {
+//                     alert(
+//                         "Your order will be delivered at " +
+//                         location +
+//                         ". Thank you for your trust"
+//                     );
 
-                }
-                alert(
-                    "Your order is = ksh" +
-                    totalPrice +
-                    " + ksh100 delivery fee."
-                );
+//                 }
+//                 alert(
+//                     "Your order is = ksh" +
+//                     totalPrice +
+//                     " + ksh100 delivery fee."
+//                 );
                 
-                alert(
-                    "Your total order is = ksh" + totalPrice
-                );
-                }
-                $("#myForm").reset();
-            } else {
-                alert("Please fill in all the valid fields for an order");
-            }
+//                 alert(
+//                     "Your total order is = ksh" + totalPrice
+//                 );
+//                 }
+//                 $("#myForm").reset();
+//             } else {
+//                 alert("Please fill in all the valid fields for an order");
+//             }
+//         event.preventDefault();
+//     });
+// });
+
+
+$(document).ready(function() {
+        var prize = 0;
+        var pizzaSize = document.getElementsById("size");
+        var pizzaSizePrice = pizzaSize.options[pizzaSize.selectedIndex].value;
+        var pizzaCrusts = document.getElementsById("medium");
+        var pizzaCrustsPrice = pizzaCrusts.input[pizzaCrusts.selectedIndex].value;
+        var pizzaTopings = document.getElementById("topings");
+        var pizzaTopingsPrice = pizzaTopings.options[pizzaTopings.selectIndex].value;
+        var pizzaNumber = document.getElementById("numbers");
+        price = parseInt(pizzaSizePrice) + parseInt(pizzaCrustsPrice) + parseInt(pizzaTopingsPrice);
+        totalPrize = price * parseInt(pizzaNumber);
+        document.getElementById("yourOrders").value = totalPrize;
         event.preventDefault();
-    });
 });

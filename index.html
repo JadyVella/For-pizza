@@ -126,17 +126,18 @@
 
     <br><br>
 
-    <form class="form">
-
-      <div id="myForm">
+    <form class="form" id="myForm">
 
         <h1>Choose your size</h1>
 
-          <select id="size">
+          <select name="size">
 
-            <option value="1000">Large Pizza-Kshs.1000</option>
-            <option value="700">Medium Pizza-Kshs.700</option>
-            <option value="500">Small Pizza - Kshs.500</option>
+            <option name="large" id="large" value="1000">Large Pizza-Kshs.1000</option>
+            <p id="largePrice">1000</p>
+            <option name="medium" id="medium" value="700">Medium Pizza-Kshs.700</option>
+            <p id="mediumPrice">700</p>
+            <option name="small" id="small" value="500">Small Pizza - Kshs.500</option>
+            <p id="smallPrice">500</p>
 
           </select>
 
@@ -144,7 +145,7 @@
 
         <h1>Crust which are best for you</h1>
 
-          <select id="crusts">
+          <select name="crusts">
 
             <option value="200">Crispy Crust - Kshs.200</option>
             <option value="200">Stuffed Crust - Kshs.200</option>
@@ -157,7 +158,7 @@
 
         <label for="topings">Choose your prefered topings:</label>
 
-        <div id="topings">
+        <div name="topings">
 
           <input type="checkbox" name="pepperoni">Pepperoni - Kshs 800<br>
           <input type="checkbox" name="mushrooms">Mushrooms - Kshs 700<br>
@@ -191,7 +192,7 @@
 
         <h1>Delivery to your office or Home(Charges Kshs.150 only)</h1>
 
-          <select id="select">
+          <select name="select">
 
             <option>YES</option>
             <option>NO</option>
@@ -204,7 +205,12 @@
 
         <submit type="submit" id="order">Place your order</submit>
 
-      </div>
+        <h1>Your Orders:</h1>
+        <ul id="yourOrders">
+
+           
+
+        </ul>
 
     </form>
 
