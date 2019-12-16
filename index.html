@@ -134,9 +134,9 @@
 
           <select id="size">
 
-            <option value="1000">Large Pizza-1000</option>
-            <option value="700">Medium Pizza-700</option>
-            <option value="500">Small Pizza - 500</option>
+            <option value="1000">Large Pizza-Kshs.1000</option>
+            <option value="700">Medium Pizza-Kshs.700</option>
+            <option value="500">Small Pizza - Kshs.500</option>
 
           </select>
 
@@ -146,10 +146,10 @@
 
           <select id="crusts">
 
-            <option value="200">Crispy Crust - 200</option>
-            <option value="200">Stuffed Crust - 200</option>
-            <option value="200">GLuten-free Crust - 200</option>
-            <option value="200">Cheese-filled - 200</option>
+            <option value="200">Crispy Crust - Kshs.200</option>
+            <option value="200">Stuffed Crust - Kshs.200</option>
+            <option value="200">GLuten-free Crust - Kshs.200</option>
+            <option value="200">Cheese-filled - Kshs.200</option>
 
           </select>
 
@@ -157,9 +157,21 @@
 
         <label for="topings">Choose your prefered topings:</label>
 
-        <select id="topings">
+        <div id="topings">
 
-          <option value="800">Pepperoni Kshs.800</option>
+          <input type="checkbox" name="pepperoni">Pepperoni - Kshs 800<br>
+          <input type="checkbox" name="mushrooms">Mushrooms - Kshs 700<br>
+          <input type="checkbox" name="onions">Onions - Kshs 600<br>
+          <input type="checkbox" name="sausage">Sausage - Kshs 500<br>
+          <input type="checkbox" name="bacon">Bacon - Kshs 400<br>
+          <input type="checkbox" name="extracheese">Extra cheese -  Kshs 300<br>
+          <input type="checkbox" name="blackOlives">Black Olives - Kshs 200<br>
+          <input type="checkbox" name="green peppers">Green Peppers Kshs 100
+
+
+        </div>  
+
+          <!-- <option value="800">Pepperoni Kshs.800</option>
           <option value="700">Mushrooms Kshs.700</option>
           <option value="600">Onions Kshs.600</option>
           <option value="500">Sausage Kshs.500</option>
@@ -169,7 +181,7 @@
           <option value="100">Green peppers Kshs.100</option>
 
 
-        </select>
+        </select> -->
 
         <br><br>
 
@@ -177,7 +189,7 @@
 
           <input id="numbers" type="number"><br><br>
 
-        <h1>Delivery to your office or Home</h1>
+        <h1>Delivery to your office or Home(Charges Kshs.150 only)</h1>
 
           <select id="select">
 
@@ -187,6 +199,8 @@
           </select>
 
         <br><br>
+
+        <submit type="submit" id="checkout">Checkout</submit><br><br>
 
         <submit type="submit" id="order">Place your order</submit>
 
