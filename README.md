@@ -24,3 +24,7 @@ If you want to be a member too, you can fill out the form and automatically you 
 Email: felixouma379@gmail.com
 Cell No.: 0792231660
 Facebook: Jady Vella
+
+# Licence & Copyright
+- Licensed under [MIT LICENCE](LICENCE)
+Copyright (c) 2019 **Felix Ouma**
