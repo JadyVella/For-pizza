@@ -1,46 +1,70 @@
-$(document).ready(function(event) {
+$(document).ready(function() {
     $("#order").submit(function(event) {
-        var sizePrice = function getSize() {
-        var pizzaSize = document.getElementById("size").value;
-        return parseInt(pizzaSize);
+
+        var priceOfPizza = function getSize() {
+        var Size = document.getElementById("size").value;
+        return parseInt(Size);
         };
-        var crustPrice = function getCrustType() {
-            var pizzaCrust = document.getElementById("crusts").value;
-            return parseInt(pizzaCrust);
+        alert("function is working");
+    
+        var pizzaCrustPrice = function getCrustType() {
+            var Crust = document.getElementById("crusts").value;
+            return parseInt(Crust);
         };
-        var toppingsPrice = function getToppings() {
-            var pizzaToppings = document.getElementById("toppings").value;
-            return parseInt(pizzaToppings);
+
+        var pizzaToppingsPrice = function getToppings() {
+            var Toppings = document.getElementById("topings").value;
+            return parseInt(Toppings);
         };
-        var quantityPrice = function getQuantity() {
-            var pizzaQuantity = document.getElementById("numbers").value;
-            return parseInt(pizzaQuantity);
+
+        var pizzaQuantityPrice = function getQuantity() {
+            var Quantity = document.getElementById("number").value;
+            return parseInt(Quantity);
         };
-        function Order(size, crust, toppings, quantity) {
+
+        function UserOrder(size, crust, toppings, quantity) {
             this.newSize = size;
             this.newCrust = crust;
             this.newToppings = toppings;
             this.newQuantity = quantity;
-        }
-        var inputForUserOrder = new Order(
-            sizePrice(),
-            crustPrice(),
-            toppingsPrice(),
-            quantityPrice()
+        };
+
+        var inputForUserOrder = new UserOrder(
+            priceOfPizza(),
+            pizzaCrustPrice(),
+            pizzaToppingsPrice(),
+            pizzaQuantityPrice()
         );
+        var totalPrice = (inputForUserOrder.newSize + inputForUserOrder.newCrust + inputForUserOrder.newToppings) * inputForUserOrder.newQuantity;
+        alert(totalPrice);
 
-        $(document).ready(function() {
-            $("#checkout").on("click",function() {
-                var totalPrice = (inputForUserOrder.newSize +
-                    inputForUserOrder.newCrust +
-                    inputForUserOrder.newToppings) *
-                    inputForUserOrder.newQuantity;
-                alert(totalPrice);
-            });
-        });
+            if (delivery === true) {
+                for (;;) {
+                    var location = prompt(
+                    "where is your location? "
+                    );
+                    if (location !== "") {
+                    alert(
+                        "Your order will be delivered at " +
+                        location +
+                        ". Thank you for your trust"
+                    );
 
-  });
-
+                }
+                alert(
+                    "Your order is = ksh" +
+                    totalPrice +
+                    " + ksh100 delivery fee."
+                );
+                
+                alert(
+                    "Your total order is = ksh" + totalPrice
+                );
+                }
+                $("#myForm").reset();
+            } else {
+                alert("Please fill in all the valid fields for an order");
+            }
+        event.preventDefault();
+    });
 });
-
-
