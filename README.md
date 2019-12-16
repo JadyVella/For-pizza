@@ -6,3 +6,5 @@ This webpage helps people to order their prefered best pizza online and get deli
 
 # Author Information
 The person who created this file and styled is Felix Ouma
+
+# setup instructions
