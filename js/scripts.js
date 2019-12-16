@@ -1,26 +1,46 @@
-var large = { name: "Large Pizza", price: 1000 };
-var medium = { name: "Medium Pizza", price: 700 };
-var small = { name: "Small Pizza", price: 500 };
+$(document).ready(function(event) {
+    $("#order").submit(function(event) {
+        var sizePrice = function getSize() {
+        var pizzaSize = document.getElementById("size").value;
+        return parseInt(pizzaSize);
+        };
+        var crustPrice = function getCrustType() {
+            var pizzaCrust = document.getElementById("crusts").value;
+            return parseInt(pizzaCrust);
+        };
+        var toppingsPrice = function getToppings() {
+            var pizzaToppings = document.getElementById("toppings").value;
+            return parseInt(pizzaToppings);
+        };
+        var quantityPrice = function getQuantity() {
+            var pizzaQuantity = document.getElementById("numbers").value;
+            return parseInt(pizzaQuantity);
+        };
+        function Order(size, crust, toppings, quantity) {
+            this.newSize = size;
+            this.newCrust = crust;
+            this.newToppings = toppings;
+            this.newQuantity = quantity;
+        }
+        var inputForUserOrder = new Order(
+            sizePrice(),
+            crustPrice(),
+            toppingsPrice(),
+            quantityPrice()
+        );
 
-var pizzaSize = { name: "Pizza Size", sizes: [large, medium, small] };
+        $(document).ready(function() {
+            $("#checkout").on("click",function() {
+                var totalPrice = (inputForUserOrder.newSize +
+                    inputForUserOrder.newCrust +
+                    inputForUserOrder.newToppings) *
+                    inputForUserOrder.newQuantity;
+                alert(totalPrice);
+            });
+        });
 
-var crispy = { name: "Crispy Crust", price: 200 };
-var stuffed = { name: "Stuffed Crust", price: 200 };
-var gluten = { name: "Gluten-free Crust", price: 200 };
-var stuffed = { name: "Stuffed Crust", price: 200 };
-var cheese = { name: "Cheese-filled Crust", price: 200 };
+  });
 
-var pizzaCrust = { name: "Pizza Crust", crusts: [crispy, stuffed, gluten, stuffed, cheese] };
+});
 
-var pepperoni = { name: "Pepperoni", price: 800 };
-var mushroom = { name: "Mushroom", price: 700 };
-var onions = { name: "Onions", price: 600 };
-var sausage = { name: "Sausage", price: 500 };
-var bacon = { name: "Bacon", price: 400 };
-var cheese = { name: "Extra cheese", price: 300 };
-var olives = { name: "Black olives", price: 200 };
-var peppers = { name: "Green peppers", price: 800 };
 
-var pizzaTopings = { name: "Pizza Topings", topings: [pepperoni, mushroom, onions, sausage, bacon, cheese, olives, peppers] };
-
-var Pizza = [size, crust, topings]
