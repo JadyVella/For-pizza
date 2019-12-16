@@ -9,3 +9,8 @@ The person who created this file and styled is Felix Ouma
 
 # setup instructions
 To view this webpage follow this link https://jadyvella.github.io/For-pizza/
+
+# BDD
+If you want to be a member too, you can fill out the form and automatically you will be a member
+
+# Technologies
