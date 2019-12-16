@@ -14,3 +14,4 @@ To view this webpage follow this link https://jadyvella.github.io/For-pizza/
 If you want to be a member too, you can fill out the form and automatically you will be a member
 
 # Technologies
+* CSS
