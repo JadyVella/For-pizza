@@ -122,25 +122,28 @@
 
     <br><br>  
     
-      <form>
+      <form class="form" name = "myForm" onsubmit="return validateForm()">
 
-          <h1>Chooce your size</h1>
+          <h1>Choose your size</h1>
 
        <div class="form-group">
 
-        <input type="checkbox" name="large" value="500" id="large">Large Kshs.1000<br>
+        <input type="checkbox" name="large" id="large">Large Kshs.1000<br>
+        <p id="largePizza">1000</p>
 
        </div>  
       
        <div class="form-group">
 
         <input type="checkbox" name="medium" value="700" id="medium">Medium Kshs.700<br>
+        <p id="mediumPizza">700</p>
 
        </div> 
 
        <div class="form-group">
 
         <input type="checkbox" name="small" value="500" id="small">Small Kshs.500<br>
+        <p id="smallPizza">500</p>
 
        </div> 
 
@@ -150,25 +153,25 @@
 
        <div class="form-group">
 
-        <input type="checkbox" name="crispy" value="200" id="crispy">Crispy Crust Kshs.200
+        <input type="checkbox" name="crispy" value="200" id="crust">Crispy Crust Kshs.200
 
        </div>
 
        <div class="form-group">
 
-        <input type="checkbox" name="stuffed" value="200" id="stuffed">Stuffed Crust Kshs.200
+        <input type="checkbox" name="stuffed" value="200" id="crust">Stuffed Crust Kshs.200
 
        </div>
 
        <div class="form-group">
 
-        <input type="checkbox" name="gluten-free" value="200" id="gluten">Gluten-free Crust Kshs.200
+        <input type="checkbox" name="gluten-free" value="200" id="crust">Gluten-free Crust Kshs.200
 
        </div>
 
        <div class="form-group">
 
-        <input type="checkbox" name="cheese-filled" value="200" id="cheese">Cheese-filled Crust Kshs.200
+        <input type="checkbox" name="cheese-filled" value="200" id="crust">Cheese-filled Crust Kshs.200
 
        </div>
 
@@ -178,21 +181,25 @@
 
          <select id="topings">
 
-           <option id="Pepperoni" value="800">Pepperoni Kshs.800</option>
-           <option id="Mushroom" value="700">Mushrooms Kshs.700</option>
-           <option id="onions" value="600">Onions Kshs.600</option>
-           <option id="sausage" value="500">Sausage Kshs.500</option>
-           <option id="bacon" value="400">Bacon shs.400</option>
-           <option id="cheese" value="300">Extra cheese Kshs.300</option>
-           <option id="olives" value="200">Black olives Kshs.200</option>
-           <option id="peppers" value="100">Green peppers Kshs.100</option>
+           <option id="topings" value="800">Pepperoni Kshs.800</option>
+           <option id="topings" value="700">Mushrooms Kshs.700</option>
+           <option id="topings" value="600">Onions Kshs.600</option>
+           <option id="topings" value="500">Sausage Kshs.500</option>
+           <option id="topings" value="400">Bacon shs.400</option>
+           <option id="topings" value="300">Extra cheese Kshs.300</option>
+           <option id="topings" value="200">Black olives Kshs.200</option>
+           <option id="topings" value="100">Green peppers Kshs.100</option>
 
 
          </select>
 
          <br><br>
 
-        <submit type="submit">Place your order</submit> 
+         <h1>Number of Pizzas you want</h1>
+
+         <input id="number" type="number"><br><br>
+
+        <submit type="submit" id="order">Place your order</submit> 
 
       </form>
 
