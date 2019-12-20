@@ -126,53 +126,53 @@
 
     <br><br>
 
-    <form class="form" id="myForm">
+    <form id="myForm">
+      <fieldset>
 
-        <h1>Choose your size</h1>
+        <legend>Choose your size</legend>
 
-          <select name="size">
+        <label>Size of a pizza:</label>
 
-            <option name="large" id="large" value="1000">Large Pizza-Kshs.1000</option>
-            <p id="largePrice">1000</p>
-            <option name="medium" id="medium" value="700">Medium Pizza-Kshs.700</option>
-            <p id="mediumPrice">700</p>
-            <option name="small" id="small" value="500">Small Pizza - Kshs.500</option>
-            <p id="smallPrice">500</p>
+        <select id="size">
 
-          </select>
+          <option id="large" value="1000">Large Pizza-Kshs.1000</option>
+          <option id="medium" value="700">Medium Pizza-Kshs.700</option>
+          <option id="small" value="500">Small Pizza - Kshs.500</option>
+
+        </select>
 
         <br>
 
-        <h1>Crust which are best for you</h1>
+        <label>Crust which are best for you</label>
 
-          <select name="crusts">
+        <select name="crusts" id="crusts">
 
-            <option value="200">Crispy Crust - Kshs.200</option>
-            <option value="200">Stuffed Crust - Kshs.200</option>
-            <option value="200">GLuten-free Crust - Kshs.200</option>
-            <option value="200">Cheese-filled - Kshs.200</option>
+          <option value="200" id="crispy">Crispy Crust - Kshs.200</option>
+          <option value="200" id="stuffed">Stuffed Crust - Kshs.200</option>
+          <option value="200" id="gluten">GLuten-free Crust - Kshs.200</option>
+          <option value="200" id="cheese">Cheese-filled - Kshs.200</option>
 
-          </select>
+        </select>
 
         <br>
 
         <label for="topings">Choose your prefered topings:</label>
 
-        <div name="topings">
+        <select name="topings" id="topings">
 
-          <input type="checkbox" name="pepperoni">Pepperoni - Kshs 800<br>
-          <input type="checkbox" name="mushrooms">Mushrooms - Kshs 700<br>
-          <input type="checkbox" name="onions">Onions - Kshs 600<br>
-          <input type="checkbox" name="sausage">Sausage - Kshs 500<br>
-          <input type="checkbox" name="bacon">Bacon - Kshs 400<br>
-          <input type="checkbox" name="extracheese">Extra cheese -  Kshs 300<br>
-          <input type="checkbox" name="blackOlives">Black Olives - Kshs 200<br>
-          <input type="checkbox" name="green peppers">Green Peppers Kshs 100
+          <option value="800">Pepperoni - Kshs 800</option><br>
+          <option value="700">Mushrooms - Kshs 700</option><br>
+          <option value="600">Onions - Kshs 600</option><br>
+          <option value="500">Sausage - Kshs 500</option><br>
+          <option value="400">Bacon - Kshs 400</option><br>
+          <option value="300">Extra cheese - Kshs 300</option><br>
+          <option value="200">Black Olives - Kshs 200</option><br>
+          <option value="100">Green Peppers Kshs 100</option>
 
 
-        </div>  
+        </select>
 
-          <!-- <option value="800">Pepperoni Kshs.800</option>
+        <!-- <option value="800">Pepperoni Kshs.800</option>
           <option value="700">Mushrooms Kshs.700</option>
           <option value="600">Onions Kshs.600</option>
           <option value="500">Sausage Kshs.500</option>
@@ -186,31 +186,28 @@
 
         <br><br>
 
-        <h1>Number of Pizzas you want</h1>
+        <label>Number of Pizzas you want</label>
 
-          <input id="numbers" type="number"><br><br>
+        <input id="numbers" type="number"><br><br>
+    
+        <label>Delivery to your office or Home(Charges Kshs.150 only)</label>
 
-        <h1>Delivery to your office or Home(Charges Kshs.150 only)</h1>
-
-          <select name="select">
-
-            <option>YES</option>
-            <option>NO</option>
-
-          </select>
+          <input type="text" id="location" name="location">
 
         <br><br>
 
-        <submit type="submit" id="checkout">Checkout</submit><br><br>
+        <!-- <submit type="submit" id="checkout">Checkout</submit><br><br> -->
 
-        <submit type="submit" id="order">Place your order</submit>
+        <submit type="submit" value="Submit" id="order" onclick="fn()">Place your order</submit>
 
         <h1>Your Orders:</h1>
         <ul id="yourOrders">
 
-           
+
 
         </ul>
+
+      </fieldset>
 
     </form>
 
